@@ -14,6 +14,10 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: "/views/routes/reviews.html",
         controller: "reviewsController"
       }).
+      when('/character', {
+        templateUrl: "/views/routes/character.html",
+        controller: "characterController"
+      }).
       otherwise({
         redirectTo: "reviews"
       });
@@ -22,12 +26,16 @@ myApp.config(['$routeProvider', function ($routeProvider) {
 myApp.controller('eveController', ['$scope', '$http', function ($scope, $http) {
   console.log('EvEEEEEEE');
 
-}]);//End of controller
+}]);//End of eveController
+
+myApp.controller('characterController', ['$scope', '$http', function($scope, $http){
+  console.log('Character killing is fun...');
+}]);//End of characterController
 
 myApp.controller('aboutController', ['$scope', '$http', function ($scope, $http){
   console.log('About.....');
-}]);
+}]);//End of aboutController
 
 myApp.controller('reviewsController', ['$scope', '$http', function($scope, $http){
   console.log('Reviews...');
-}]);
+}]);//End of reviewsController

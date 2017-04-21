@@ -12,13 +12,6 @@ app.listen( process.env.PORT || 8080, function( req, res ){
   console.log( 'listening on 8080' );
 });
 
-// app.get('/', function (req, res) {
-//   res.sendFile(path.resolve('views/index.html'));
-// });//end of base URL
-
-//static folder
-// app.use(express.static('public'));
-
 app.get("/*", function(req,res){
   var file = req.params[0] || "/views/index.html";
   res.sendFile(path.join(__dirname, "/public/", file));
