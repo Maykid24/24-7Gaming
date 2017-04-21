@@ -3,15 +3,15 @@ myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider.
       when('/about', {
-        templateUrl: "views/routes/about.html",
+        templateUrl: "/views/routes/about.html",
         controller: "aboutController"
       }).
       when('/eve',{
-        templateUrl: "views/routes/eve.html",
+        templateUrl: "/views/routes/eve.html",
         controller: "eveController"
       }).
       when('/reviews', {
-        templateUrl: "views/routes/reviews.html",
+        templateUrl: "/views/routes/reviews.html",
         controller: "reviewsController"
       }).
       otherwise({
